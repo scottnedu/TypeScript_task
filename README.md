@@ -1,6 +1,5 @@
 # TypeScript_task
 
-TypeScript Filter Persons Project
 This project demonstrates how to filter a list of User and Admin objects using TypeScript. It includes a filterPersons function that filters based on personType and criteria, ensuring type safety and flexibility.
 
 
@@ -15,3 +14,4 @@ criteria: A partial object of User or Admin properties (excluding type).
 # I added a type guard to ensure the criteria argument is a valid object.
 
 # Used Partial<Omit<User, 'type'>> and Partial<Omit<Admin, 'type'>> to exclude the type field from the criteria object.
+

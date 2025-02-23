@@ -15,7 +15,6 @@ function logPerson(person) {
     console.log(" - ".concat(person.name, ", ").concat(person.age, ", ").concat(person.type === 'admin' ? person.role : person.occupation));
 }
 function filterPersons(persons, personType, criteria) {
-    // Check if criteria is an object
     if (typeof criteria !== 'object' || criteria === null) {
         throw new Error('Criteria must be an object');
     }
@@ -28,9 +27,7 @@ function filterPersons(persons, personType, criteria) {
         });
     });
 }
-// Filter users by age
 var usersOfAge23 = filterPersons(exports.persons, 'user', { age: 23 });
 usersOfAge23.forEach(logPerson);
-// Filter admins by age
 var adminsOfAge23 = filterPersons(exports.persons, 'admin', { age: 23 });
 adminsOfAge23.forEach(logPerson);
